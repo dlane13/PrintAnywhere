@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conveyor Belt Operation</title>
+
+  <!-- Updated Bootstrap to v5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(205, 255, 243);
+    }
+
+    .navbar-nav .nav-link {
+      color: rgb(197, 203, 255);
+    }
+
+    .jumbotron-main {
+      margin-bottom: 0;
+      background-color: rgb(205, 255, 243);
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .jumbotron-main h1 {
+      color: rgb(120, 20, 70);
+      font-weight: bold;
+    }
+
+    .jumbotron-main p {
+      color: rgb(168, 71, 154);
+    }
+
+    .jumbotron-footer {
+      background-color: rgb(137, 159, 238);
+      text-align: left;
+      padding: 1rem 2rem;
+    }
+
+    .custom-button {
+      background-color: rgb(255, 106, 210);
+      color: white;
+      padding: 10px 20px;
+      border: 6px solid lightseagreen;
+      box-shadow: 2px 2px 3px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+      background-color: rgb(234, 5, 119);
+      border-color: rgb(17, 97, 93);
+      transform: scale(1.25);
+      box-shadow: 0 15px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    .embed-responsive-item {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/HomePage">Home Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/OctoPrint">OctoPrint Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FailureDetection">Failure Detection</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Jumbotron Section -->
+  <div class="jumbotron jumbotron-main">
+    <h1>Remote Conveyor Belt Operation</h1>
+    <p>
+      This conveyor belt prototype demonstrates a system that automatically removes completed prints from the 3D printer's build plate, allowing the next print in the queue to begin immediately. Use the button below to control the conveyor belt remotely.
+    </p>
+  </div>
+
+  <!-- Button Section -->
+  <div class="text-center my-4">
+    <button id="conveyor_run" class="custom-button">Run Conveyor Belt</button>
+  </div>
+
+  <!-- Include JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="/static/conveyorbelt.js"></script>
+
+  <!-- Footer -->
+  <div class="jumbotron jumbotron-footer">
+    <p>&copy; CompactDisk 2024 </p>
+  </div>
+</body>
+
+</html>
