@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask App Service
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/RaspberryPi/FinalProject/Website
+ExecStart=/usr/bin/python3 /home/pi/RaspberryPi/FinalProject/Website/app.py --bind 0.0.0.0:5000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
