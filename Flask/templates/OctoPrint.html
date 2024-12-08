@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Print Monitoring with Octoprint</title>
+
+  <!-- Updated Bootstrap to v5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(205, 255, 243);
+    }
+
+    .navbar-nav .nav-link {
+      color: rgb(197, 203, 255);
+    }
+
+    .jumbotron-main {
+      margin-bottom: 0;
+      background-color: rgb(205, 255, 243);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .jumbotron-main h1 {
+      color: rgb(120, 20, 70);
+      font-weight: bold;
+    }
+
+    .jumbotron-main h3,
+    .jumbotron-main p {
+      color: rgb(168, 71, 154);
+    }
+
+    .jumbotron-footer {
+      background-color: rgb(137, 159, 238);
+      text-align: left;
+      padding: 1rem 2rem;
+    }
+
+    .centered-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25vh;
+    }
+
+    .circular-button {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: rgb(217, 67, 142);
+        color: white;
+        font-size: 1 rem;
+        text-align: center;
+        border: 5px solid lightseagreen; 
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3); 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .circular-button:hover {
+        transform: scale(1.12);
+        box-shadow: 0 15px 22px rgba(0, 0, 0, 0.4); 
+        background-color: rgb(124, 5, 106);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/HomePage">About the Project</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/OctoPrint">Print Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FailureDetection">Failure Detection</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Jumbotron Section -->
+  <div class="jumbotron jumbotron-main">
+    <h1>Embedded 3D Print Monitoring</h1>
+    <h3>Manage OctoPrint via this interface</h3>
+    <p>Use this URL to access the OctoPrint interface!</p>
+  </div>
+
+  <!-- octoprint link button -->
+  <div class="centered-button">
+    <a href="http://10.245.195.173/" class="circular-button">Click Here to Access OctoPrint</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="jumbotron jumbotron-footer">
+    <p>&copy; CompactDisk 2024</p>
+  </div>
+</body>
+
+</html>
